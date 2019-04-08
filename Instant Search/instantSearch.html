@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>Instant Search</title>
+		<link rel="stylesheet" type="text/css" href="instantSearch.css">
+</head>
+<body>
+		<form id="body" v-cloak>
+		    <div class="search">
+		    	<input type="text" v-model="searchItems" placeholder="Search..." />
+		    </div>
+
+		    <ul>
+		    	<li v-for="article in Articles">
+		            <a v-bind:href="article.url"><img v-bind:src="article.image" /></a>
+		            <p>{{article.headline}}</p>
+		        </li>
+		    </ul>
+
+</form>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.min.js"></script>
+<script src="instantSearch.js"></script>
+</body>
+</html>
